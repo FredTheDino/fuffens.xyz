@@ -1,0 +1,54 @@
+body {
+    background-color: pink;
+}
+
+.fuf-logo span {
+    position: relative;
+}
+
+.fuf-logo * {
+    transition: all 0.2s ease-in-out;
+}
+
+.fuf-logo *:hover {
+    color: rgba(0,0,0,0);
+}
+
+.fuf-logo :nth-child(9) {
+    animation-name: heavy-bobbing;
+    animation-duration: 2s;
+    animation-delay: -13.37s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.fuf-logo :nth-child(10) {
+    animation-name: heavy-bobbing;
+    animation-duration: 5s;
+    animation-delay: -13.37s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.fuf-logo :nth-child(11) {
+    animation-name: heavy-bobbing;
+    animation-duration: 3s;
+    animation-delay: -13.37s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up {
+    from { top: 0.0em; }
+    to { top: -0.1em; }
+}
+
+@keyframes bobbing {
+    from { top: 0.05em; }
+    to { top: -0.05em; }
+}
+
+@keyframes heavy-bobbing {
+    from { top: 0.1em; }
+    to { top: -0.1em; }
+}
