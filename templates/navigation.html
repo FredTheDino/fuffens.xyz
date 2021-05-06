@@ -1,0 +1,9 @@
+{% set all_pages = ["index", "about", "stuff", "thoughts"] %}
+
+<nav>
+    {% for p in all_pages %}
+        <div class="option {% if page == p %}selected{% endif %}">
+            <a href="{{ p }}.html">{{ p }}</a>
+        </div>
+    {% endfor %}
+</nav>

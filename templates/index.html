@@ -1,9 +1,27 @@
-{% set title = "Hello" %}
+{% set title = "Hello World" %}
 {% include "preamble.html" %}
-<h1>{% include "logo.html" %}</h1>
-{% include "logo.html" %}
+<div class="title">
+    <h1 class="center page-title">{% include "logo.html" %}</h1>
+    <h3 class="center page-subtitle">The stash under my bed</h3>
+</div>
 
-<p>Hello</p>
+{% include "navigation.html" %}
+
+<article>
+    {{ content }}
+    <h3>So what is this place?</h3>
+    <p>
+    <span class="big-letter">Ideas</span> exist, and I have them. I figured
+    I should have a place to put them - hence I made this place. Here you can
+    find: my stuff, ideas and thoughts, all of them neatly organized for both our
+    reading pleasure.
+    </p>
+    <h3>But who am I?</h3>
+    <p>
+    <span class="big-letter">I</span>, Edvard Thörnros, am a Swedish computer sience student -
+    living the life on the world wide web.
+    </p>
+</article>
 
 {% include "postamble.html" %}
 

@@ -1,5 +1,6 @@
 body {
     background-color: pink;
+    font-family: sans-serif;
 }
 
 .fuf-logo span {
@@ -51,4 +52,57 @@ body {
 @keyframes heavy-bobbing {
     from { top: 0.1em; }
     to { top: -0.1em; }
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    margin-top: 4em;
+    margin-bottom: 5em;
+}
+
+.page-title {
+}
+
+.page-subtitle {
+    margin-top: -1.0em;
+    font-weight: normal;
+}
+
+article {
+    max-width: 40em;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav .option {
+    margin: 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+nav .option a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+nav .option a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav .option.selected {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.big-letter {
+    font-weight: 800;
 }
