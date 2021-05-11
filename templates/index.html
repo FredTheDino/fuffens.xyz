@@ -7,21 +7,7 @@
 
 {% include "navigation.html" %}
 
-<article>
-    {{ content }}
-    <h3>So what is this place?</h3>
-    <p>
-    <span class="big-letter">Ideas</span> exist, and I have them. I figured
-    I should have a place to put them - hence I made this place. Here you can
-    find: my stuff, ideas and thoughts, all of them neatly organized for both our
-    reading pleasure.
-    </p>
-    <h3>But who am I?</h3>
-    <p>
-    <span class="big-letter">I</span>, Edvard Thörnros, am a Swedish computer sience student -
-    living the life on the world wide web.
-    </p>
-</article>
+<article>{{ content | safe }}</article>
 
 {% include "postamble.html" %}
 

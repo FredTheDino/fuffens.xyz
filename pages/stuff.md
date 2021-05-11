@@ -1,5 +1,5 @@
-/// title: About
-/// page: about
+/// title: Stuff
+/// page: stuff
 /// author: Edvard Thörnros
 /// template: simple.html
 /// first: 2021-05-06
