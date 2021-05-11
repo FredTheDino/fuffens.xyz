@@ -2,11 +2,6 @@ import marko
 from flask import Flask, render_template
 app = Flask(__name__)
 
-def render_content(lines):
-    lines = "".join(f"<h2>{line[1:-1]}</h2>\n\n" if line.startswith("# ") else line for line in lines).strip()
-    lines.replace(" ", "\n</p>blargh<p>\n")
-    return lines + "</p>"
-
 def render_med(src):
     with open(f"pages/{src}") as f:
         lines = f.readlines()
@@ -24,16 +19,13 @@ def render_med(src):
         return render_template(variables["template"] or "base.html", **variables)
 
 
-
-
 @app.route('/')
-def hello_world():
+def index():
     return render_template("index.html")
 
-@app.route('/about')
-def about():
-    return render_med("about.med")
-
+@app.route('/<other>')
+def other(other):
+    return render_med(other + ".md")
 
 if __name__ == '__main__':
     app.run('0.0.0.0', 5000, static="static")

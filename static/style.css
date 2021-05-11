@@ -106,3 +106,29 @@ nav .option.selected {
 .big-letter {
     font-weight: 800;
 }
+
+img {
+    width: 80%;
+    display: block;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0.0, 0.0, 0.0, 0.2);
+}
+
+.ge-count {
+    font-size: 120%;
+    font-weight: 800;
+}
+
+.link {
+    display: flex;
+    border-radius: 3px;
+    background-color: rgba(0.0, 0.0, 0.0, 0.1);
+}
+
+.link * {
+    justify-content: space-between;
+    padding: 1em;
+}
