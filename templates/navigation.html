@@ -1,9 +1,20 @@
 {% set all_pages = ["index", "about", "stuff", "thoughts"] %}
 
+<header>
+{% if not no_title %}
+<div class="title">
+    <h1 class="center page-title">{% include "logo.html" %}</h1>
+    <h3 class="center page-subtitle">The stash under my bed</h3>
+</div>
+{% endif %}
+
 <nav>
     {% for p in all_pages %}
-        <div class="option {% if page == p %}selected{% endif %}">
-            <a href="{{ p }}">{{ p }}</a>
-        </div>
+        <a href="/{{ p }}.html"  class="option {% if page == p %}selected{% endif %}">
+            <div>
+                {{ p }}
+            </div>
+        </a>
     {% endfor %}
 </nav>
+</header>

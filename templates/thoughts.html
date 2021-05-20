@@ -1,0 +1,28 @@
+{% include "preamble.html" %}
+
+{% include "navigation.html" %}
+
+{% macro render_thought(title, author, first, short, path) -%}
+    <div class="thought">
+        <h3 class="thought-title"><a href="{{ path }}">{{ title }}</a></h3>
+        <div class="thought-body">{{ short }}</div>
+        <div class="thought-footer">{{ first }} <span class="spacing"></span> {{ author }}</div>
+    </div>
+{%- endmacro %}
+
+<article class="thoughts">
+    {{ content | safe }}
+    <div class="thought-list">
+    {% for thought in thoughts %}
+        {{ render_thought(
+            thought["title"],
+            thought["author"],
+            thought["first"],
+            thought["short"],
+            thought["path"],
+        ) }}
+    {% endfor %}
+    </div>
+</article>
+
+{% include "postamble.html" %}

@@ -5,7 +5,7 @@
 /// first: 2021-05-06
 /// last: 2021-05-06
 
-<h1 class="center page-title"> Here's a list of stuff I've made </h1>
+<h1 class="page-title"> Here's a list of stuff I've made </h1>
 Have a browse around and see if you find anything you enjoy!
 Some common denominators are: minimizing dependencies, game engines,
 and compiled languages. The items are ordered by coolness.
