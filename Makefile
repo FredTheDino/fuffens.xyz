@@ -10,8 +10,6 @@ freeze:
 	$(shell FLASK_APP=$(APP) python3 freeze.py)
 	@echo "  Frozen"
 
-publish: freeze
-
 clean:
 	rm -rf build
 	
