@@ -8,9 +8,15 @@ if __name__ == "__main__":
     freezer = Freezer(app)
 
     @freezer.register_generator
-    def all_pages():
-        for page in glob("pages/**/*.md", recursive=True):
-            yield page[5:-3] + ".html"
+    def other():
+        for page in glob("pages/*.md"):
+            yield { 'a': page[6:-3] }
+
+    @freezer.register_generator
+    def other_nested():
+        for page in glob("pages/*/*.md"):
+            a, b = page[6:-3].split("/")
+            yield { 'a': a, 'b': b }
 
     freezer.freeze()
 
