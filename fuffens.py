@@ -37,7 +37,7 @@ def favicon():
 
 @app.route('/')
 def index():
-    return render_med("pages/index.md")
+    return render_med("pages/about.md")
 
 @app.route('/thoughts.html')
 def thoughts():
