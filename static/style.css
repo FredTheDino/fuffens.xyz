@@ -7,6 +7,12 @@ html, body {
     height: 100%;
 }
 
+pre {
+    padding: 1em;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
 .fuf-logo span {
     position: relative;
 }
